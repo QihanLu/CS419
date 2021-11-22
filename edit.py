@@ -88,7 +88,8 @@ def add():
     if name in login.userlist:
         print("Name is taken")
         return
-    password = input("Enter the password: ")
+    password = "111111"
+    print("Your default password is 111111")
     privilege = input("Enter the privilege(1,2): ")
     if privilege != "2" and privilege != "1":
         print("Privilege is incorrect")
