@@ -24,23 +24,21 @@ def read(level):
                 tt = x.content
                 ttt = base64.b64decode(tt).decode('utf-8')
                 print(ttt)
-                print("Succeed to show text")
                 print('\n')
+                print("Succeed to show text")
                 return
             else:
                 print("You dont have permission to view this")
-                print('\n')
                 return
     print("File not found")
 
 
 def savetxt(level):
     global list
-    print(list)
-    file = input("Type in the name of file you want to save: ")
+    file = input("Type in the name of file you want to save: (Only .txt file is accepted)")
     print('\n')
     try:
-        f = open(file+".txt", "r")
+        f = open(file, "r")
     except (FileNotFoundError, IOError):
         print("file not found")
         return
@@ -53,7 +51,6 @@ def savetxt(level):
     list.append(aaa)
     pickle.dump(list, open("readlist.dat", "wb"))
     print("succeed to save text")
-    print('\n')
     return
 
 
@@ -80,9 +77,10 @@ def deletetxt(level):
 def showtxt(level):
     for i in list:
         if i.level <= level:
-            print(i.name + '\n' + '|' + '\n')
-    print("succeed to show text")
+            print(i.name)
+            print('|')
     print('\n')
+    print("succeed to show text")
     return
 
 

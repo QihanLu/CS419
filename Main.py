@@ -6,7 +6,6 @@ def main():
 
     while True:
         name= login.getname()
-        print('\n')
         password= login.getpassword()
         print('\n')
         b=login.checkuserinfo(name,password)

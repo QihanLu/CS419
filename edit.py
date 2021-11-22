@@ -9,18 +9,20 @@ def listuserfunction(name):
         if pri == "1":
             print("Userlist operation: Listuser,Changepassword,Exit")
             print('|')
-            print("file operation: Read,Savetxt,Showtxt,Downloadtxt")
+            print("File operation: Read,Savetxt,Showtxt,Downloadtxt")
         # manager
         if pri == "2":
             print("Userlist operation: Listuser,Changepassword,Deleteuser,Exit")
             print('|')
-            print("file operation: Read,Savetxt,Deletetxt,Showtxt,Downloadtxt")
+            print("File operation: Read,Savetxt,Deletetxt,Showtxt,Downloadtxt")
         # admin
         if pri == "3":
             print("Userlist operation: Listuser,Changepassword,Delete,Add,Promote,Demote,Sync,Restore,Exit")
             print('|')
-            print("file operation: Read,Savetxt,Deletetxt,Showtxt,Downloadtxt,Syncfile,Restorefile")
+            print("File operation: Read,Savetxt,Deletetxt,Showtxt,Downloadtxt,Syncfile,Restorefile")
+        print('\n')
         do = input("Please enter the next operation: ")
+        print('\n')
         do = do.upper()
 
         if do == "LISTUSER":
